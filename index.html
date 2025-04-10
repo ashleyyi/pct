@@ -18,7 +18,11 @@
             function search(input) {
                 if(event.key === 'Enter') {
                     var key = input.value;  
-                    fetch("./results.txt")
+                    const url = 'https://github.com/ashleyyi/pct/blob/a0743d50c538da3099498298bf3f111213f0d953/results'
+                    const response = await fetch(url);
+                    const data = await response.text();
+                    console.log(data);
+                    fetch("results.txt")
                         .then((res) => res.text())
                         .then((text) => {
                             console.log(text);
