@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <header>
+        <div id="pctkorea">PCT Korea Help-desk UNOFFICIAL</div>
+        <button class="nav-button" role="button" onclick="location.href='faq.html'">FAQ</button>
+        <button class="nav-button" role="button" onclick="location.href=''">Email</button>
+        <button class="nav-button" role="button" onclick="location.href=''">Resources</button>
+    </header>
+    <body>
+        <div id="search-q">What are you looking for?</div>
+        <input id="searchbar" type="text" placeholder="Search..." onkeydown="search(this)">
+        <div id="results">
+            <!--let this be empty for js to add elements into-->
+        </div>
+        <script>
+            function search(input) {
+                if(event.key === 'Enter') {
+                    var key = input.value;  
+                    fetch("./results.txt")
+                        .then((res) => res.text())
+                        .then((text) => {
+                            console.log(text);
+                            qna = text.rsplit("-");
+                            console.log(qna);
+                        })     
+                }
+            }
+        </script>
+    </body>
+    <div class="footer">
+        <p id="disclaimer">This is a disclaimer that this website was made by Ashley Yi and not by the official KIPO company.</p>
+    </div>
+</html>

@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <header>
+        <div id="pctkorea">PCT Korea Help-desk UNOFFICIAL</div>
+        <button class="nav-button" role="button" onclick="location.href='home.html'">Home</button>
+        <button class="nav-button" role="button" onclick="location.href=''">Email</button>
+        <button class="nav-button" role="button" onclick="location.href=''">Resources</button>
+    </header>
+    <body>
+        <div class="flex-container">
+            <form id="group1">
+                <button class="collapsed" type="button">Cited References</button>
+                    <div class="content">
+                        <p>Please note that the references cited in the ISR/WO are available for applicants to download through the PCT ISA portal</p>
+                        <button class="collapsedmini" type="button">I need to send a document to KIPO. What options are available?</button>
+                            <div class="contentmini">
+                                <p id="minitext">An applicant can submit the document directly to KIPO either via fax or by post mail as the following information:
+
+                                    KIPO's Fax number : 82-42-481-8578,
+                                    
+                                    * You need to press 011 if dialing from the United States.
+                                    
+                                     
+                                    
+                                    KIPO’s Mailing address :
+                                    
+                                    International Application Division Korean Intellectual Property Office Government Complex-Daejeon,
+                                    
+                                    189 Cheongsa-ro, Seo-gu, Daejeon 35208 Republic of Korea
+                                    
+                                     
+                                    
+                                    Also, the applicant may submit/upload the PCT intermediate documents through the “ PCT ISA portal” system on KIPO English website, www.kipo.go.kr/en.
+                                    
+                                    The service path is : www.kipo.go.kr/en => click “PCT ISA Portal” => click “ PCT Status”.
+                                    
+                                    You may also use the following link :
+                                    
+                                    https://www.patent.go.kr/jsp/kiponet/ma/infomodifypatent/PctStatusInfoInput.jsp .
+                                    
+                                    Please enter your PCT application # and password on the ISA/202.
+                                    
+                                     
+                                    
+                                    * In KIPO’s PCT ISA portal system, please kindly note that if it is your first time, you will need to run/install the executable program, i.e. “raonkSetup.exe” application on your computer to download/upload the documents. You might find any pop-up message for it on the bottom (or top) of the screen and click " run" or "save" when you see the message. Once you installed it, you will not need to do it again next time.
+                                    
+                                    </p>
+                            </div>
+                    </div>
+                <button class="collapsed" type="button">ISA / IPEA</button>
+                    <div class="content">
+                        <p>Please note that the references cited in the ISR/WO are available for applicants to download through the PCT ISA portal</p>
+                        <button class="collapsedmini" type="button"></button>
+                    </div>
+                <button class="collapsed" type="button">PCT Application</button>
+                    <div class="content">
+                        <p>Intro note to this section hello.</p>
+                        <button class="collapsedmini" type="button"></button>
+                    </div>
+            </form>
+            <form id="group2">
+                <button class="collapsed" type="button">Demand</button>
+                    <div class="content">
+                        <p>Please note that the references cited in the ISR/WO are available for applicants to download through the PCT ISA portal</p>
+                        <button class="collapsedmini" type="button"></button>
+                    </div>
+                <button class="collapsed" type="button">ISR / WO</button>
+                    <div class="content">
+                        <p>Intro note to this section hi!</p>
+                        <button class="collapsedmini" type="button"></button>
+                    </div>
+                <button class="collapsed" type="button">Rectification of Obvious Mistakes</button>
+                    <div class="content">
+                        <p>Intro note to this section hello.</p>
+                        <button class="collapsedmini" type="button"></button>
+                    </div>
+            </form>
+            <form id="group3">
+                <button class="collapsed" type="button">Fees & Payments</button>
+                    <div class="content">
+                        <p>Please note that the references cited in the ISR/WO are available for applicants to download through the PCT ISA portal</p>
+                        <button class="collapsedmini" type="button"></button>
+                    </div>
+                <button class="collapsed" type="button">KIPO</button>
+                    <div class="content">
+                        <p>Intro note to this section hello.</p>
+                        <button class="collapsedmini" type="button"></button>
+                    </div>
+                <button class="collapsed" type="button">Status</button>
+                    <div class="content">
+                        <p>Intro note to this section hello.</p>
+                        <button class="collapsedmini" type="button"></button>
+                    </div>
+            </form>
+        </div>
+        <script>
+            var coll = document.getElementsByClassName("collapsed");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight){
+                        content.style.maxHeight = null;
+                    } else {
+                        const sub = document.getElementById("minitext");
+                        var total = content.scrollHeight + sub.scrollHeight;
+                        content.style.maxHeight = total + "px";
+                    } 
+                });
+            }
+
+            var coll2 = document.getElementsByClassName("collapsedmini");
+
+            for (i = 0; i < coll2.length; i++) {
+                coll2[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var contentmini = this.nextElementSibling;
+                    if (contentmini.style.maxHeight){
+                        contentmini.style.maxHeight = null;
+                    } else {
+                        console.log(contentmini.scrollHeight);
+                        contentmini.style.maxHeight = contentmini.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+    </body>
+    <div class="footer">
+        <p id="disclaimer">This is a disclaimer that this website was made by Ashley Yi and not by the official KIPO company.</p>
+    </div>
+</html>
