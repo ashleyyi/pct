@@ -15,21 +15,22 @@
             <!--let this be empty for js to add elements into-->
         </div>
         <script src="https://github.com/ashleyyi/pct/blob/a0743d50c538da3099498298bf3f111213f0d953/results" crossorigin="anonymous">
-            console.log("updated");
+            /* console.log("updated");
             async function fetchText() {
                 const url = 'https://github.com/ashleyyi/pct/blob/a0743d50c538da3099498298bf3f111213f0d953/results'
                 const response = await fetch(url);
                 const data = await response.text();
                 console.log(data);
                 return data;
-            }
+            } */
             
             function search(input) {
                 if(event.key === 'Enter') {
                     var key = input.value;  
 
-                    const results = fetchText();
-                    console.log(results);
+                    //const results = fetchText();
+                    //console.log(results);
+                    console.log("we made it here");
                     /*fetch("results.txt")
                         .then((res) => res.text())
                         .then((text) => {
