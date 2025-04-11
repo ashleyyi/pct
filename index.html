@@ -13,10 +13,9 @@
         <input id="searchbar" type="text" placeholder="Search..." onkeydown="search(this)">
         <div id="results">
             <!--let this be empty for js to add elements into-->
-            console.log("proof this works");
         </div>
         <script>
-            console.log("even more new");
+            console.log("this has to work");
             async function fetchText() {
                 const url = 'https://github.com/ashleyyi/pct/blob/a0743d50c538da3099498298bf3f111213f0d953/results'
                 const response = await fetch(url);
@@ -31,7 +30,6 @@
 
                     const results = fetchText();
                     //console.log(results);
-                    console.log("yessir");
                     /*fetch("results.txt")
                         .then((res) => res.text())
                         .then((text) => {
